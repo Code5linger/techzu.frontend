@@ -62,7 +62,7 @@ export async function purchaseReservation(
 }
 
 export async function registerUser(username: string): Promise<User> {
-  const res = await fetch(`${API_URL}api/users`, {
+  const res = await fetch(`${API_URL}/api/users`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username }),
