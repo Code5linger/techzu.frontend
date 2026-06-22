@@ -32,7 +32,11 @@ export async function reserveDrop(
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId }),
   });
-  const data = await handleResponse<{ reservationId: string; dropId: string; expiresAt: string }>(res);
+  const data = await handleResponse<{
+    reservationId: string;
+    dropId: string;
+    expiresAt: string;
+  }>(res);
   return {
     id: data.reservationId,
     dropId: data.dropId,
@@ -58,7 +62,7 @@ export async function purchaseReservation(
 }
 
 export async function registerUser(username: string): Promise<User> {
-  const res = await fetch(`${API_URL}/api/users`, {
+  const res = await fetch(`${API_URL}api/users`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ username }),
