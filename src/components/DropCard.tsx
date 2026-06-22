@@ -112,7 +112,7 @@ export function DropCard({ drop, userId }: DropCardProps) {
         {state === 'reserved' && (
           <div className="space-y-2">
             <p className="text-center text-sm text-amber-400">
-              Reserved — complete purchase in {secondsLeft}s
+              Reserved! Complete purchase in {secondsLeft}s
             </p>
             <button
               onClick={handlePurchase}
@@ -134,7 +134,7 @@ export function DropCard({ drop, userId }: DropCardProps) {
 
         {state === 'purchased' && (
           <div className="rounded-xl bg-emerald-500/15 px-4 py-2.5 text-center font-medium text-emerald-400">
-            Purchased ✓
+            Purchased
           </div>
         )}
 
