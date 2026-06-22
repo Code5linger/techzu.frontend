@@ -14,6 +14,42 @@ A high-concurrency inventory management system built for the Techzu Ichicode tec
 
 ---
 
+## Frontend Setup
+
+### Clone Repository
+
+```bash
+git clone https://github.com/Code5linger/techzu.frontend.git
+cd techzu.frontend
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Configure Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+### Start Frontend
+
+```bash
+npm run dev
+```
+
+The application will be available at:
+
+```text
+http://localhost:5173
+```
+
+---
 ## Features
 
 - **Real-time stock updates**. All connected clients see inventory changes instantly via WebSocket
